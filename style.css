@@ -1,0 +1,70 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --bg-color: aliceblue;
+    --scrollbar-thumb: #b3b9bf;
+    --scrollbar-bg: #c0c6cc;
+  }
+
+  body {
+    background-image: url("XP Surface Day.png");
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg-color: #151B24;
+    --scrollbar-thumb: #b3b9bf;
+    --scrollbar-bg: #83878c;
+  }
+
+  body {
+    background-image: url("XP Surface Night.png");
+  }
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+  border-radius: 10px;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+body main {
+  position: relative;
+}
+body main #first__section, body main #second__section {
+  content: "";
+  min-height: 100vh;
+}
+body main #first__section {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  padding-top: 50px;
+}
+body main #second__section {
+  position: relative;
+  z-index: 2;
+  margin-top: calc(100vh + 170px);
+  box-shadow: 0px -70px 45px 100px var(--bg-color);
+  background: var(--bg-color);
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnNjc3MiLCJzdHlsZS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtJQUNFLG1CQUFBO0lBQ0EscUJBQUE7SUFFQSwwQkFBQTtJQUNBLHVCQUFBO0VDQUY7O0VER0E7SUFDRSwyQ0FBQTtFQ0FGO0FBQ0Y7QURHQTtFQUNFO0lBQ0Usa0JBQUE7SUFDQSxtQkFBQTtJQUVBLDBCQUFBO0lBQ0EsdUJBQUE7RUNGRjs7RURLQTtJQUNFLDZDQUFBO0VDRkY7QUFDRjtBREtBO0VBQ0UsV0FBQTtBQ0hGOztBRE1BO0VBQ0UsNEJBQUE7QUNIRjs7QURNQTtFQUVFLGlDQUFBO0VBQ0EsbUJBQUE7QUNKRjs7QURPQTtFQUNFLFNBQUE7QUNKRjs7QURPQTtFQUNFLDRCQUFBO0VBQ0EsNEJBQUE7RUFDQSx3QkFBQTtFQUNBLHNCQUFBO0FDSkY7QURNRTtFQUNFLGtCQUFBO0FDSko7QURNSTtFQUNFLFdBQUE7RUFDQSxpQkFBQTtBQ0pOO0FET0k7RUFDRSxlQUFBO0VBQ0EsVUFBQTtFQUNBLE1BQUE7RUFDQSxXQUFBO0VBQ0EsaUJBQUE7QUNMTjtBRFFJO0VBQ0Usa0JBQUE7RUFDQSxVQUFBO0VBQ0EsK0JBQUE7RUFFQSxnREFBQTtFQUNBLDJCQUFBO0FDUE4iLCJmaWxlIjoic3R5bGUuY3NzIn0= */

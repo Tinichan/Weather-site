@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"/>
+    <title>Document</title>
+</head>
+<body>
+<main class="weather d-flex flex-column">
+    <section id="first__section">
+        <div class="container d-flex pt-5">
+            <div class="col d-flex flex-column">
+                <div>
+                    <span class="weather__city"></span>
+                    <span class="weather__crd d-flex"></span>
+                </div>
+                <div class="d-flex flex-column">
+                    <span class="weather__temp"></span>
+                    <span class="weather__feels__like"></span>
+                </div>
+            </div>
+            <div class="col d-flex flex-column align-items-center justify-content-center">
+                <div class="weather__icon d-flex justify-content-end"></div>
+                <span class="weather__desc"></span>
+            </div>
+        </div>
+    </section>
+    <section id="second__section">
+        <div class="container d-flex">
+            <div class="col d-flex flex-column">
+                <span class="weather__wind__speed"></span>
+                <span class="weather__wind__deg"></span>
+                <span class="weather__wind__gust"></span>
+            </div>
+            <div class="col">
+                <span class="weather__humidity"></span>
+            </div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+    </section>
+</main>
+<script src="main.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
