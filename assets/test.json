@@ -1,6 +1,6 @@
 {
   "coord": {
-    "lon": 6.7213,
+    "lon": 6.7214,
     "lat": 60.3755
   },
   "weather": [
@@ -13,29 +13,29 @@
   ],
   "base": "stations",
   "main": {
-    "temp": 294.43,
-    "feels_like": 293.76,
-    "temp_min": 294.43,
-    "temp_max": 294.43,
-    "pressure": 1018,
-    "humidity": 44,
-    "sea_level": 1018,
-    "grnd_level": 1017
+    "temp": 294.03,
+    "feels_like": 293.56,
+    "temp_min": 294.03,
+    "temp_max": 294.03,
+    "pressure": 1023,
+    "humidity": 53,
+    "sea_level": 1023,
+    "grnd_level": 1022
   },
   "visibility": 10000,
   "wind": {
-    "speed": 1.99,
-    "deg": 305,
-    "gust": 1.54
+    "speed": 2.18,
+    "deg": 293,
+    "gust": 2.02
   },
   "clouds": {
-    "all": 0
+    "all": 10
   },
-  "dt": 1661690828,
+  "dt": 1661772207,
   "sys": {
     "country": "NO",
-    "sunrise": 1661660231,
-    "sunset": 1661712725
+    "sunrise": 1661746776,
+    "sunset": 1661798944
   },
   "timezone": 7200,
   "id": 6639661,

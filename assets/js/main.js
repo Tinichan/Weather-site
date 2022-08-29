@@ -15,12 +15,13 @@ function successGeolocation(pos) {
             return resp.json();
         })
         .then(function (data) {
+            console.log(data);
 
             //Название города
-            document.querySelector(".weather__city").textContent = data.name;
+            // document.querySelector(".weather__city").textContent = data.name;
 
             //Координаты
-            document.querySelector(".weather__city").textContent = "x: " + x + " - y: " + y;
+            document.querySelector(".weather__crd").textContent = "X: " + x + " - Y: " + y;
 
             //Вермя(?)
             //document.querySelector(".weather__time__time").textContent = data.time;
@@ -29,7 +30,7 @@ function successGeolocation(pos) {
             document.querySelector(".weather__temp").innerHTML = Math.round(data.main.temp - 273) + "&deg;";
 
             //"Чувствуеться как...", мин/макс температура
-            document.querySelector(".weather__feels__like").innerHTML = Math.round(data.main.feels_like - 273) + "&deg;";
+            document.querySelector(".weather__feels__like").innerHTML = "Feels like: " + Math.round(data.main.feels_like - 273) + "&deg;";
             //document.querySelector(".weather__min").innerHTML = Math.round(data.main.temp_min - 273) + "&deg;";
             //document.querySelector(".weather__max").innerHTML = Math.round(data.main.temp_max - 273) + "&deg;";
 
@@ -45,38 +46,39 @@ function successGeolocation(pos) {
             document.querySelector(".weather__desc").textContent = data.weather[0]["description"];
 
             //Добавляем иконку погоды
+            document.querySelector('.weather__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" alt="${data.weather[0]['icon']}">`;
 
-            switch (data.weather[0]['icon']) {
-                case '01d':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="" alt="${data.weather[0]['icon']}">`;
-                    break;
-                case '02d':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" alt="${data.weather[0]['icon']}">`;
-                    break;
-                case '03d':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" alt="${data.weather[0]['icon']}">`;
-                    break;
-                case '04d':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" alt="${data.weather[0]['icon']}">`;
-                    break;
-                case '09d':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" alt="${data.weather[0]['icon']}">`;
-                    break;
-                case '10d':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" alt="${data.weather[0]['icon']}">`;
-                    break;
-                case '11d':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" alt="${data.weather[0]['icon']}">`;
-                    break;
-                case '13d':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" alt="${data.weather[0]['icon']}">`;
-                    break;
-                case '50d':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" alt="${data.weather[0]['icon']}">`;
-                    break;
-                default:
-                    document.querySelector('.weather__icon').innerHTML = `<span>bruh</span>`;
-            }
+            // switch (data.weather[0]['icon']) {
+            //     case '01d' || '01n':
+            //         document.querySelector('.weather__icon').innerHTML = `<img src="" alt="${data.weather[0]['icon']}">`;
+            //         break;
+            //     case '02d' || '02n':
+            //         document.querySelector('.weather__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" alt="${data.weather[0]['icon']}">`;
+            //         break;
+            //     case '03d' || '03n':
+            //         document.querySelector('.weather__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" alt="${data.weather[0]['icon']}">`;
+            //         break;
+            //     case '04d' || '04n':
+            //         document.querySelector('.weather__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" alt="${data.weather[0]['icon']}">`;
+            //         break;
+            //     case '09d' || '09n':
+            //         document.querySelector('.weather__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" alt="${data.weather[0]['icon']}">`;
+            //         break;
+            //     case '10d' || '10n':
+            //         document.querySelector('.weather__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" alt="${data.weather[0]['icon']}">`;
+            //         break;
+            //     case '11d' || '11n':
+            //         document.querySelector('.weather__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" alt="${data.weather[0]['icon']}">`;
+            //         break;
+            //     case '13d' || '13n':
+            //         document.querySelector('.weather__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" alt="${data.weather[0]['icon']}">`;
+            //         break;
+            //     case '50d' || '50n':
+            //         document.querySelector('.weather__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" alt="${data.weather[0]['icon']}">`;
+            //         break;
+            //     default:
+            //         document.querySelector('.weather__icon').innerHTML = `<span>bruh</span>`;
+            // }
         })
         .catch(function () {
             //Обрабатываем ошибки

@@ -2,13 +2,14 @@
   :root {
     color-scheme: light;
     --bg-color: aliceblue;
+    --font-color: black;
 
     --scrollbar-thumb: #b3b9bf;
     --scrollbar-bg: #c0c6cc;
   }
 
   body {
-    background-image: url("//assets/images/XP_Surface_Day.png");
+    background-image: url("/assets/images/XP_Surface_Day.png");
   }
 }
 
@@ -16,13 +17,14 @@
   :root {
     color-scheme: dark;
     --bg-color: #151B24;
+    --font-color: white;
 
-    --scrollbar-thumb: #b3b9bf;
-    --scrollbar-bg: #83878c;
+    --scrollbar-thumb: #415370;
+    --scrollbar-bg: #2b374a;
   }
 
   body {
-    background-image: url("//assets/images/XP_Surface_Night.png");
+    background-image: url("/assets/images/XP_Surface_Night.png");
   }
 }
 
@@ -31,17 +33,17 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--scrollbar);
+  background: var(--scrollbar-thumb);
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  //background-color: transparent;
-  background-color: var(--bg-color);
-  border-radius: 10px;
+  background-color: var(--scrollbar-bg);
 }
 
 * {
   margin: 0;
+  color: var(--font-color);
 }
 
 body {
@@ -64,6 +66,37 @@ body {
       top: 0;
       width: 100%;
       padding-top: 50px;
+
+      .weather__city {
+        font-size: 64px;
+        font-weight: bolder;
+      }
+
+      .weather__crd {
+        text-transform: uppercase;
+        font-weight: lighter;
+      }
+
+      .weather__temp {
+        font-size: 6rem;
+        font-weight: bolder;
+      }
+
+      .weather__feels__like {
+        font-weight: lighter;
+      }
+
+      .weather__icon {
+        img {
+          width: 200px;
+        }
+      }
+
+      .weather__desc {
+        font-size: 2em;
+        font-weight: lighter;
+        text-transform: capitalize;
+      }
     }
 
     #second__section {
