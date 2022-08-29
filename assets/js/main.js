@@ -29,21 +29,22 @@ function successGeolocation(pos) {
             //Темп. значение в Кельвинах (отнимаем 273, чтобы получить значение в Цельсия)
             document.querySelector(".weather__temp").innerHTML = Math.round(data.main.temp - 273) + "&deg;";
 
+            //Описание погоды
+            document.querySelector(".weather__desc").textContent = data.weather[0]["description"];
+
             //"Чувствуеться как...", мин/макс температура
             document.querySelector(".weather__feels__like").innerHTML = "Feels like: " + Math.round(data.main.feels_like - 273) + "&deg;";
             //document.querySelector(".weather__min").innerHTML = Math.round(data.main.temp_min - 273) + "&deg;";
             //document.querySelector(".weather__max").innerHTML = Math.round(data.main.temp_max - 273) + "&deg;";
 
             //Ветер
-            document.querySelector(".weather__wind__speed").textContent = "Ветер: " + data.wind.speed + " км/ч";
+            document.querySelector(".weather__wind__speed").textContent = "Wind: " + data.wind.speed + " км/ч";
             document.querySelector(".weather__wind__deg").innerHTML = Math.round(data.wind.deg - 273) + "&deg;";
             document.querySelector(".weather__wind__gust").textContent = data.wind.gust;
 
             //Влажность
-            document.querySelector(".weather__humidity").textContent = "Влажность: " + data.main.humidity + "%";
+            document.querySelector(".weather__humidity").textContent = "Humidity: " + data.main.humidity + "%";
 
-            //Описание погоды
-            document.querySelector(".weather__desc").textContent = data.weather[0]["description"];
 
             //Добавляем иконку погоды
             document.querySelector('.weather__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" alt="${data.weather[0]['icon']}">`;
