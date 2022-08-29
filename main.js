@@ -8,7 +8,7 @@ function successGeolocation(pos) {
     console.log(y);
 
     //Получаем прогноз в массив data
-    fetch("http://api.openweathermap.org/data/2.5/weather?lat=" + y + "&lon=" + x + "&lang=ru&appid=d1c4e502a34a19109ad8444d92e4cd61")
+    fetch("https://api.openweathermap.org/data/2.5/weather?lat=" + y + "&lon=" + x + "&lang=ru&appid=d1c4e502a34a19109ad8444d92e4cd61")
         .then(function (resp) {
             return resp.json();
         })
