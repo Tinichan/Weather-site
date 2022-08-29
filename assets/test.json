@@ -1,0 +1,44 @@
+{
+  "coord": {
+    "lon": 6.7213,
+    "lat": 60.3755
+  },
+  "weather": [
+    {
+      "id": 800,
+      "main": "Clear",
+      "description": "ясно",
+      "icon": "01d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 294.43,
+    "feels_like": 293.76,
+    "temp_min": 294.43,
+    "temp_max": 294.43,
+    "pressure": 1018,
+    "humidity": 44,
+    "sea_level": 1018,
+    "grnd_level": 1017
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 1.99,
+    "deg": 305,
+    "gust": 1.54
+  },
+  "clouds": {
+    "all": 0
+  },
+  "dt": 1661690828,
+  "sys": {
+    "country": "NO",
+    "sunrise": 1661660231,
+    "sunset": 1661712725
+  },
+  "timezone": 7200,
+  "id": 6639661,
+  "name": "Кинсарвик",
+  "cod": 200
+}
