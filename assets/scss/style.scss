@@ -4,8 +4,8 @@
     --bg-color: aliceblue;
     --font-color: black;
 
-    --scrollbar-thumb: #b3b9bf;
-    --scrollbar-bg: #c0c6cc;
+    --scrollbar-thumb: #909499;
+    --scrollbar-bg: #d0dbe1;
   }
 
   body {
@@ -29,12 +29,12 @@
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb);
-  border-radius: 10px;
+  border-radius: 10px 0 0 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -74,7 +74,7 @@ body {
 
       .weather__crd {
         text-transform: uppercase;
-        font-weight: lighter;
+        font-weight: normal;
       }
 
       .weather__temp {
@@ -83,7 +83,7 @@ body {
       }
 
       .weather__feels__like {
-        font-weight: lighter;
+        font-weight: normal;
       }
 
       .weather__icon {
