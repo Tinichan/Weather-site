@@ -52,52 +52,52 @@ function successGeolocation(pos) {
 
             switch (data.weather[0]['icon']) {
                 case '01d':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="../images/icons/clear_sky.svg" alt="${data.weather[0]['icon']}">`;
+                    document.querySelector('.weather__icon').innerHTML = `<img src="assets/images/icons/clear_sky.svg" alt="${data.weather[0]['icon']}">`;
                     break;
                 case '01n':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="../images/icons/clear_sky(dark).svg" alt="${data.weather[0]['icon']}">`;
+                    document.querySelector('.weather__icon').innerHTML = `<img src="assets/images/icons/clear_sky(dark).svg" alt="${data.weather[0]['icon']}">`;
                     break;
 
 
                 case '02d':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="../images/icons/few_clouds.svg" alt="${data.weather[0]['icon']}">`;
+                    document.querySelector('.weather__icon').innerHTML = `<img src="assets/images/icons/few_clouds.svg" alt="${data.weather[0]['icon']}">`;
                     break;
                 case '02n':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="../images/icons/few_clouds(dark).svg" alt="${data.weather[0]['icon']}">`;
+                    document.querySelector('.weather__icon').innerHTML = `<img src="assets/images/icons/few_clouds(dark).svg" alt="${data.weather[0]['icon']}">`;
                     break;
 
 
                 case '03d':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="../images/icons/scattered_clouds.svg" alt="${data.weather[0]['icon']}">`;
+                    document.querySelector('.weather__icon').innerHTML = `<img src="assets/images/icons/scattered_clouds.svg" alt="${data.weather[0]['icon']}">`;
                     break;
                 case '03n':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="../images/icons/scattered_clouds(dark).svg" alt="${data.weather[0]['icon']}">`;
+                    document.querySelector('.weather__icon').innerHTML = `<img src="assets/images/icons/scattered_clouds(dark).svg" alt="${data.weather[0]['icon']}">`;
                     break;
 
 
                 case '04d' || '04n':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="../images/icons/broken_clouds.svg" alt="${data.weather[0]['icon']}">`;
+                    document.querySelector('.weather__icon').innerHTML = `<img src="assets/images/icons/broken_clouds.svg" alt="${data.weather[0]['icon']}">`;
                     break;
 
 
                 case '09d':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="../images/icons/shower_rain.svg" alt="${data.weather[0]['icon']}">`;
+                    document.querySelector('.weather__icon').innerHTML = `<img src="assets/images/icons/shower_rain.svg" alt="${data.weather[0]['icon']}">`;
                     break;
                 case '09n':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="../images/icons/shower_rain(dark).svg" alt="${data.weather[0]['icon']}">`;
+                    document.querySelector('.weather__icon').innerHTML = `<img src="assets/images/icons/shower_rain(dark).svg" alt="${data.weather[0]['icon']}">`;
                     break;
 
 
                 case '10d':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="../images/icons/rain.svg" alt="${data.weather[0]['icon']}">`;
+                    document.querySelector('.weather__icon').innerHTML = `<img src="assets/images/icons/rain.svg" alt="${data.weather[0]['icon']}">`;
                     break;
                 case '10n':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="../images/icons/rain(dark).svg" alt="${data.weather[0]['icon']}">`;
+                    document.querySelector('.weather__icon').innerHTML = `<img src="assets/images/icons/rain(dark).svg" alt="${data.weather[0]['icon']}">`;
                     break;
 
 
                 case '11d' || '11n':
-                    document.querySelector('.weather__icon').innerHTML = `<img src="../images/icons/thunderstorm.svg" alt="${data.weather[0]['icon']}">`;
+                    document.querySelector('.weather__icon').innerHTML = `<img src="assets/images/icons/thunderstorm.svg" alt="${data.weather[0]['icon']}">`;
                     break;
 
                 case '13d' || '13n':
