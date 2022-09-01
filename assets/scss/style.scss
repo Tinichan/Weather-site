@@ -4,7 +4,7 @@
     --bg-color: aliceblue;
     --font-color: black;
 
-    --scrollbar-thumb: #909499;
+    --scrollbar-thumb: #88b61d;
     --scrollbar-bg: #d0dbe1;
   }
 
@@ -42,6 +42,9 @@
 }
 
 * {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+
   margin: 0;
   color: var(--font-color);
 }
