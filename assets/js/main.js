@@ -22,7 +22,7 @@ function successGeolocation(pos) {
             if (data.name) {
                 document.querySelector(".weather__city").textContent = data.name;
             } else {
-                document.querySelector(".weather__city").textContent = "Sity not found 🤷‍♂";
+                document.querySelector(".weather__city").textContent = "City not found 🤷‍♂";
             }
             //Координаты
             document.querySelector(".weather__crd").textContent = "X: " + x + " - Y: " + y;
