@@ -1,17 +1,20 @@
-function successGeolocation(pos) {
-    var userLang = navigator.language;
-    var crd = pos.coords;
+const APP_ID = "d1c4e502a34a19109ad8444d92e4cd61";
+const UNITS = "metric";
 
-    var x = crd.latitude;
-    var y = crd.longitude;
+function successGeolocation(pos) {
+    console.log(pos)
+
+    const { latitude } = pos.coords;
+    const { longitude } = pos.coords;
 
     // console.log(x);
     // console.log(y);
     // console.log(userLang.substring(0, 2));
 
     //Получаем прогноз в массив data
+
     // fetch("https://api.openweathermap.org/data/2.5/weather?lat=" + y + "&lon=" + x + "&lang=" + userLang.substring(0, 2) + "&appid=d1c4e502a34a19109ad8444d92e4cd61")
-    fetch("https://api.openweathermap.org/data/2.5/weather?lat=" + y + "&lon=" + x + "&lang=en&appid=d1c4e502a34a19109ad8444d92e4cd61")
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=en&appid=${APP_ID}&units=${UNITS}`)
         .then(function (resp) {
             return resp.json();
         })
@@ -25,19 +28,19 @@ function successGeolocation(pos) {
                 document.querySelector(".weather__city").textContent = "City not found 🤷‍♂";
             }
             //Координаты
-            document.querySelector(".weather__crd").textContent = "X: " + x + " - Y: " + y;
+            document.querySelector(".weather__crd").textContent = "X: " + latitude + " - Y: " + longitude;
 
             //Вермя(?)
             //document.querySelector(".weather__time__time").textContent = data.time;
 
             //Темп. значение в Кельвинах (отнимаем 273, чтобы получить значение в Цельсия)
-            document.querySelector(".weather__temp").innerHTML = Math.round(data.main.temp - 273) + "&deg;";
+            document.querySelector(".weather__temp").innerHTML = `${data.main.temp}&deg`;
 
             //Описание погоды
             document.querySelector(".weather__desc").textContent = data.weather[0]["description"];
 
             //"Чувствуеться как...", мин/макс температура
-            document.querySelector(".weather__feels__like").innerHTML = "Feels like: " + Math.round(data.main.feels_like - 273) + "&deg;";
+            document.querySelector(".weather__feels__like").innerHTML = `Feels like: ${data.main.feels_like}&deg`;
             //document.querySelector(".weather__min").innerHTML = Math.round(data.main.temp_min - 273) + "&deg;";
             //document.querySelector(".weather__max").innerHTML = Math.round(data.main.temp_max - 273) + "&deg;";
 
@@ -131,9 +134,9 @@ function successGeolocation(pos) {
                     console.log("'" + data.weather[0]['icon'] + "'");
             }
         })
-        .catch(function () {
+        .catch(function (error) {
             //Обрабатываем ошибки
-            console.log('Ошибка');
+            console.log(error);
         });
 }
 
