@@ -56,13 +56,13 @@ function successGeolocation(pos) {
             //document.querySelector(".weather__time__time").textContent = data.time;
 
             //Темп. значение в Кельвинах (отнимаем 273, чтобы получить значение в Цельсия)
-            document.querySelector(".weather__temp").innerHTML = `${data.main.temp}&deg`;
+            document.querySelector(".weather__temp").innerHTML =  Math.round(data.main.temp - 273) + `&deg;`;
 
             //Описание погоды
             document.querySelector(".weather__desc").textContent = data.weather[0]["description"];
 
             //"Чувствуеться как...", мин/макс температура
-            document.querySelector(".weather__feels__like").innerHTML = `Feels like: ${data.main.feels_like}&deg`;
+            document.querySelector(".weather__feels__like").innerHTML = `Feels like: ` + Math.round(data.main.feels_like - 273) + `&deg;`;
             //document.querySelector(".weather__min").innerHTML = Math.round(data.main.temp_min - 273) + "&deg;";
             //document.querySelector(".weather__max").innerHTML = Math.round(data.main.temp_max - 273) + "&deg;";
 
