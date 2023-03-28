@@ -80,7 +80,7 @@ function successGeolocation(pos) {
             const iconId = data.weather[0]['icon'];
 
             if (images.hasOwnProperty(iconId)) {
-                document.querySelector('.weather__icon').innerHTML = `<img src="assets/images/icons/clear_sky.svg" alt="${images[iconId]}">`
+                document.querySelector('.weather__icon').innerHTML = `<img src="${images[iconId]}" alt="${images[iconId]}">`
             }
             else {
                 document.querySelector('.weather__icon').innerHTML = unknownImage;
