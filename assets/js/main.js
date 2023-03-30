@@ -2,24 +2,78 @@ const APP_ID = "d1c4e502a34a19109ad8444d92e4cd61";
 const UNITS = "metric";
 
 const images = {
-    '01d': 'assets/images/icons/clear_sky.svg',
-    '01n': 'assets/images/icons/clear_sky(dark).svg',
-    '02d': 'assets/images/icons/few_clouds.svg',
-    '02n': 'assets/images/icons/few_clouds(dark).svg',
-    '03d': 'assets/images/icons/scattered_clouds.svg',
-    '03n': 'assets/images/icons/scattered_clouds(dark).svg',
-    '04n': 'assets/images/icons/broken_clouds.svg',
-    '04d': 'assets/images/icons/broken_clouds.svg',
-    '09d': 'assets/images/icons/shower_rain.svg',
-    '09n': 'assets/images/icons/shower_rain(dark).svg',
-    '10d': 'assets/images/icons/rain.svg',
-    '10n': 'assets/images/icons/rain(dark).svg',
-    '11d': 'assets/images/icons/thunderstorm.svg',
-    '11n': 'assets/images/icons/thunderstorm.svg',
-    '13d': 'https://openweathermap.org/img/wn/13d@2x.png',
-    '13n': 'https://openweathermap.org/img/wn/13n@2x.png',
-    '50d': 'https://openweathermap.org/img/wn/50d@2x.png',
-    '50n': 'https://openweathermap.org/img/wn/50n@2x.png'
+    '01d': {
+        url: 'assets/images/icons/clear_sky.svg',
+        alt: 'Alt text...'
+    },
+    '01n': {
+        url: 'assets/images/icons/clear_sky(dark).svg',
+        alt: 'Alt text...'
+    },
+    '02d': {
+        url: 'assets/images/icons/few_clouds.svg',
+        alt: 'Alt text...'
+    },
+    '02n': {
+        url: 'assets/images/icons/few_clouds(dark).svg',
+        alt: 'Alt text...'
+    },
+    '03d': {
+        url: 'assets/images/icons/scattered_clouds.svg',
+        alt: 'Alt text...'
+    },
+    '03n': {
+        url: 'assets/images/icons/scattered_clouds(dark).svg',
+        alt: 'Alt text...'
+    },
+    '04n': {
+        url: 'assets/images/icons/broken_clouds.svg',
+        alt: 'Alt text...'
+    },
+    '04d': {
+        url: 'assets/images/icons/broken_clouds.svg',
+        alt: 'Alt text...'
+    },
+    '09d': {
+        url: 'assets/images/icons/shower_rain.svg',
+        alt: 'Alt text...'
+    },
+    '09n': {
+        url: 'assets/images/icons/shower_rain(dark).svg',
+        alt: 'Alt text...'
+    },
+    '10d': {
+        url: 'assets/images/icons/rain.svg',
+        alt: 'Alt text...'
+    },
+    '10n': {
+        url: 'assets/images/icons/rain(dark).svg',
+        alt: 'Alt text...'
+    },
+    '11d': {
+        url: 'assets/images/icons/thunderstorm.svg',
+        alt: 'Alt text...'
+    },
+    '11n': {
+        url: 'assets/images/icons/thunderstorm.svg',
+        alt: 'Alt text...'
+    },
+    '13d': {
+        url: 'https://openweathermap.org/img/wn/13d@2x.png',
+        alt: 'Alt text...'
+    },
+    '13n': {
+        url: 'https://openweathermap.org/img/wn/13n@2x.png',
+        alt: 'Alt text...'
+    },
+    '50d': {
+        url: 'https://openweathermap.org/img/wn/50d@2x.png',
+        alt: 'Alt text...'
+    },
+    '50n': {
+        url: 'https://openweathermap.org/img/wn/50n@2x.png',
+        alt: 'Alt text...'
+    }
 };
 const unknownImage = '<span>❓</span>';
 
@@ -80,7 +134,7 @@ function successGeolocation(pos) {
             const iconId = data.weather[0]['icon'];
 
             if (images.hasOwnProperty(iconId)) {
-                document.querySelector('.weather__icon').innerHTML = `<img src="${images[iconId]}" alt="${images[iconId]}">`
+                document.querySelector('.weather__icon').innerHTML = `<img src="${images[iconId].url}" alt="${images[iconId].alt}">`
             }
             else {
                 document.querySelector('.weather__icon').innerHTML = unknownImage;
